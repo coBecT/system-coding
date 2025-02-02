@@ -67,7 +67,7 @@ void calculator() {
     printf("Результат: %.2lf\n", result);
 }
 
-// 3. Форматированный вывод (с защитой от переполнения)
+// 3. Форматированный вывод
 void formattedOutput() {
     char name[50], surname[50], hobby[100];
     int age;
@@ -84,9 +84,9 @@ void formattedOutput() {
     printf("\"%s\"\t\"%s\"\t%d\t%s\n", name, surname, age, hobby);
 }
 
-// 4. Символьный ввод/вывод (с обработкой EOF)
+// 4. Символьный ввод/вывод
 void characterInputOutput() {
-    int ch; // Используем int для корректной обработки EOF
+    int ch;
     printf("Вводите символы (для выхода - 'x'):\n");
     // Очистка буфера перед началом
     while ((ch = getchar()) != '\n' && ch != EOF);
