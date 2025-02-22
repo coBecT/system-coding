@@ -4,23 +4,22 @@
 
 
 // 1. Таблица умножения
-void printMultiplicationTable() {
-    printf("Таблица умножения:\n");
+void tablYmnozh() {
     for (int i = 1; i <= 5; i++) {
-        for (int j = 1; j <= 5; j++) {
+        for (int j = 1; j <= 10; j++) {
             printf("%d\t", i * j);
         }
         printf("\n");
     }
 }
 
-// 2. Калькулятор (с очисткой буфера)
+// 2. Калькулятор
+// - Проверка ввода на корректность ввода (только числа).
+// - Проверка деления на ноль.
 void calculator() {
     double nums[3];
     char ops[2];
-
     printf("Введите три числа и две операции (например: 1 + 2 * 3): ");
-
     if (scanf("%lf %c %lf %c %lf", &nums[0], &ops[0], &nums[1], &ops[1], &nums[2]) != 5) {
         printf("Ошибка ввода!\n");
         // Очистка буфера
@@ -102,7 +101,8 @@ void characterInputOutput() {
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
-    printMultiplicationTable();
+    tablYmnozh();
+ //   printMultiplicationTable();
     calculator();
     formattedOutput();
     characterInputOutput();
