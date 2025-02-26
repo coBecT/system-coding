@@ -21,6 +21,7 @@ int main() {
     // Проверка для строки, объявленной через char[]
     char message_arr[] = "Hello, World!";
     printf("Длина строки (char[]): %zu\n", my_strlen(message_arr));
-
+    while(getchar() != '\n');
+    getchar();
     return 0;
 }
